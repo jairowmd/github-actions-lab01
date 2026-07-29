@@ -1,0 +1,25 @@
+name: Meu primeiro Pipeline
+
+on: # "Quando alguém fizer um Push execute este Workflow."
+    push: # evento
+
+jobs: # recursos executados
+
+    primeiro-job: # Nome do Job
+
+    #  O GitHub cria uma máquina virtual para executar tudo. Essa máquina é chamada Runner.
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - name: Baixar codigo
+              uses: actions/checkout@v4 # Clone meu repositório nesta máquina Ubuntu. - Sem isso A máquina estaria vazia.
+
+            - name: mostrar mensagem
+              run:  echo "Ola Github Actions" # executando um comando Linux.
+
+            - name: Mostrar data
+              run: date # executando um comando Linux.
+
+            - name: Mostrar arquivos
+              run: ls -la # executando um comando Linux.
