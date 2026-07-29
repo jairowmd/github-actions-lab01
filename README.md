@@ -1,1 +1,3 @@
-# github-actions-lab01
+# GitHub Actions Lab 01
+
+Meu primeiro pipeline.
